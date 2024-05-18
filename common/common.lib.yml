@@ -19,4 +19,13 @@ level:
   com.example.myapp: DEBUG
 #@ end
 
-#@ common = struct.make(logging=logging,server=server,management=management)
+#@ def jpa():
+hibernate:
+  ddl-auto: update
+show-sql: true
+properties:
+  hibernate:
+    format_sql: true
+#@ end
+
+#@ common = struct.make(logging=logging,server=server,management=management,jpa=jpa)

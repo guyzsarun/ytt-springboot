@@ -4,8 +4,9 @@
 server: #@ common.server()
 management: #@ common.management()
 
-spring: #@ config.spring()
-datasource: #@ config.datasource()
+spring:
+  datasource: #@ config.datasource()
+  jpa: #@ common.jpa()
 
 logging: #@ common.logging()
 

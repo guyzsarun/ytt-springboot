@@ -1,17 +1,15 @@
 #@ load("@ytt:struct", "struct")
 
 #@ def spring():
-config:
-    activate:
-        on-profile: dev
+activate:
+    on-profile: dev
 #@ end
 
 #@ def datasource():
-datasource:
-    url: jdbc:mysql://localhost:3306/dev-database
-    username: dbuser
-    password: dbpassword
-    driver-class-name: com.mysql.cj.jdbc.Driver
+url: jdbc:mysql://localhost:3306/dev-database
+username: dbuser
+password: dbpassword
+driver-class-name: com.mysql.cj.jdbc.Driver
 #@ end
 
 #@ config = struct.make(spring=spring,datasource=datasource)
