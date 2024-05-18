@@ -1,0 +1,16 @@
+#@ load("common.lib.yml", "common")
+#@ load("dev.lib.yml", "config")
+
+server: #@ common.server()
+management: #@ common.management()
+
+spring: #@ config.spring()
+datasource: #@ config.datasource()
+
+logging: #@ common.logging()
+
+custom:
+  app:
+    name: MySpringBootApp
+    description: This is an example of a Spring Boot application with YAML configuration.
+    version: 1.0.0

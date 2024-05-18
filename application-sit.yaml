@@ -1,0 +1,10 @@
+#@ load("common.lib.yml", "common")
+#@ load("sit.lib.yml", "config")
+
+server: #@ common.server()
+management: #@ common.management()
+
+spring: #@ config.spring()
+datasource: #@ config.datasource()
+
+logging: #@ common.logging()
