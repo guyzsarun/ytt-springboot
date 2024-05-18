@@ -1,0 +1,22 @@
+#@ load("@ytt:struct", "struct")
+
+#@ def server():
+port: 8080
+servlet:
+  context-path: /api
+#@ end
+
+#@ def management():
+endpoints:
+  web:
+    exposure:
+      include: "*"
+#@ end
+
+#@ def logging():
+level:
+  root: INFO
+  com.example.myapp: DEBUG
+#@ end
+
+#@ common = struct.make(logging=logging,server=server,management=management)
