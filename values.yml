@@ -1,5 +1,0 @@
-#@data/values
----
-logging:
-  level: INFO
-  file: /var/log/app.log
